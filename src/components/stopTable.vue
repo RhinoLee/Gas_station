@@ -5,7 +5,6 @@
       <table class="table">
         <thead>
           <tr>
-            <th><abbr title="#">#</abbr></th>
             <th><abbr title="站代號">站代號</abbr></th>
             <th><abbr title="縣市">縣市-鄉鎮區</abbr></th>
             <th><abbr title="直營/加盟">直營/加盟</abbr></th>
@@ -17,8 +16,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(station, idx) in allGasStation" :key="station.站代號">
-            <th>{{ idx }}</th>
+          <tr v-for="station in dataOfCurrentPage" :key="station.站代號">
             <td>{{ station.站代號 }}</td>
             <td>{{ station.縣市 }} - {{ station.鄉鎮區 }}</td>
             <td>{{ station.類別 }}</td>
@@ -49,7 +47,6 @@
         </tbody>
         <tfoot>
           <tr>
-            <th><abbr title="#">#</abbr></th>
             <th><abbr title="站代號">站代號</abbr></th>
             <th><abbr title="縣市">縣市</abbr></th>
             <th><abbr title="直營/加盟">直營/加盟</abbr></th>
@@ -73,7 +70,12 @@ export default {
   computed: {
     allGasStation(){
       return this.$store.state.GasStationData
+    },
+    dataOfCurrentPage(){
+      return this.$store.getters.dataOfCurrentPage
     }
   }, 
 };
 </script>
+
+

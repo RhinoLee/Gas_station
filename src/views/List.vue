@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <navBar></navBar>
     <stopTable></stopTable>
     <pagination></pagination>
@@ -19,3 +19,11 @@ export default {
   }
 }
 </script>
+
+
+<style lang="scss" scoped>
+  .container {
+    padding-bottom: 60px;
+  }
+    
+</style>
