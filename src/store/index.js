@@ -12,23 +12,13 @@ export default createStore({
     currentCity: 'null',
     areas: [],
     currentArea: 'null',
-    searchName: ''
+    searchName: '',
+    // isDirectly: false,
   },
   mutations: {
-    setCurrentPage(state, payload){
-      state.currentPage = payload
+    setState(state, obj){
+      state[obj.dataName] = obj.val
     },
-    setCurrentCity(state, payload){
-      state.currentCity = payload
-    },
-    setCurrentArea(state, payload){
-      state.currentArea = payload
-    },
-    setSearchName(state, payload){
-      state.searchName = payload
-    },
-    
-
   },
   getters: {
     filterSearchStation(state){
@@ -81,7 +71,6 @@ export default createStore({
       }else {
         return add
       }
-      
 
       return add
     }

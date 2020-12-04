@@ -100,7 +100,7 @@ export default {
         return this.$store.getters.currentCity
       },
       set(val){
-        this.$store.commit('setCurrentCity', val)
+        this.$store.commit('setState', {dataName: 'currentCity', val})
       }
     },
     areas(){
@@ -111,7 +111,7 @@ export default {
         return this.$store.getters.currentArea
       },
       set(val){
-        this.$store.commit('setCurrentArea', val)
+        this.$store.commit('setState', {dataName: 'currentArea', val})
       }
     },
     searchName: {
@@ -119,7 +119,7 @@ export default {
         return this.$store.state.searchName
       },
       set(val){
-        this.$store.commit('setSearchName', val)
+        this.$store.commit('setState', {dataName: 'searchName', val})
       }
     },
     
@@ -144,18 +144,3 @@ export default {
 }
 
 </style>
-
-
-[
-  {
-    "CityName": "臺北市",
-    "CityEngName": "Taipei City",
-    "AreaList": [
-      {
-        "ZipCode": "100",
-        "AreaName": "中正區",
-        "AreaEngName": "Zhongzheng Dist."
-      },
-    ]
-  }
-}

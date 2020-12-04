@@ -41,7 +41,7 @@ export default {
         return this.$store.state.currentPage
       },
       set(val){
-        this.$store.commit('setCurrentPage', val)
+        this.$store.commit('setState', {dataName: 'currentPage', val})
       }
     },
     pageEnd(){
