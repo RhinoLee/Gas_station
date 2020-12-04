@@ -28,7 +28,7 @@
 <script>
 export default {
   watch: {
-    filterSearchStation(){
+    filterAreaStation(){
       this.setPage(1)
     }
   },
@@ -50,10 +50,9 @@ export default {
     addPagePosition(){
       return this.$store.getters.addPagePosition
     },
-    filterSearchStation(){
-      return this.$store.getters.filterSearchStation
+    filterAreaStation(){
+      return this.$store.getters.filterAreaStation
     },
-
     
   },
   methods: {

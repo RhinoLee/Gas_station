@@ -51,28 +51,28 @@
 
         <div class="navbar-item check">
           <label class="checkbox">
-            <input type="checkbox">
+            <input v-model="isDirectly" type="checkbox">
             直營
           </label>
         </div>
 
         <div class="navbar-item check">
           <label class="checkbox">
-            <input type="checkbox">
+            <input v-model="isSelfHelp" type="checkbox">
             自助加油
           </label>
         </div>
 
         <div class="navbar-item check">
           <label class="checkbox">
-            <input type="checkbox">
+            <input v-model="is98" type="checkbox">
             98無鉛
           </label>
         </div>
 
         <div class="navbar-item check">
           <label class="checkbox">
-            <input type="checkbox">
+            <input v-model="isAllTimeOpen" type="checkbox">
             24h
           </label>
         </div>
@@ -122,7 +122,38 @@ export default {
         this.$store.commit('setState', {dataName: 'searchName', val})
       }
     },
-    
+    isDirectly: {
+      get(){
+        return this.$store.state.isDirectly
+      },
+      set(val){
+        this.$store.commit('setState', {dataName: 'isDirectly', val})
+      }
+    },
+    isSelfHelp: {
+      get(){
+        return this.$store.state.isSelfHelp
+      },
+      set(val){
+        this.$store.commit('setState', {dataName: 'isSelfHelp', val})
+      }
+    },
+    is98: {
+      get(){
+        return this.$store.state.is98
+      },
+      set(val){
+        this.$store.commit('setState', {dataName: 'is98', val})
+      }
+    },
+    isAllTimeOpen: {
+      get(){
+        return this.$store.state.isAllTimeOpen
+      },
+      set(val){
+        this.$store.commit('setState', {dataName: 'isAllTimeOpen', val})
+      }
+    },
   }
 }
 </script>
