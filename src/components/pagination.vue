@@ -27,6 +27,11 @@
 
 <script>
 export default {
+  watch: {
+    filterSearchStation(){
+      this.setPage(1)
+    }
+  },
   computed: {
     totalPages(){
       return this.$store.getters.totalPages
@@ -44,7 +49,10 @@ export default {
     },
     addPagePosition(){
       return this.$store.getters.addPagePosition
-    }
+    },
+    filterSearchStation(){
+      return this.$store.getters.filterSearchStation
+    },
 
     
   },

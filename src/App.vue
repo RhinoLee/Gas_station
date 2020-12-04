@@ -9,8 +9,8 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <router-link to="/" class="navbar-item">List</router-link>
-          <router-link to="/map" class="navbar-item">Map</router-link>
+          <router-link to="/" class="navbar-item is-size-4">List</router-link>
+          <router-link to="/map" class="navbar-item is-size-4">Map</router-link>
         </div>
 
       </div>

@@ -39,7 +39,12 @@
         <div class="navbar-item search">
           <div class="field">
             <div class="control">
-              <input class="input is-info" type="text" placeholder="搜尋站名">
+              <input 
+              class="input is-info" 
+              type="text" 
+              placeholder="搜尋站名" 
+              v-model.trim="searchName"
+              >
             </div>
           </div>
         </div>
@@ -57,12 +62,14 @@
             自助加油
           </label>
         </div>
+
         <div class="navbar-item check">
           <label class="checkbox">
             <input type="checkbox">
             98無鉛
           </label>
         </div>
+
         <div class="navbar-item check">
           <label class="checkbox">
             <input type="checkbox">
@@ -106,7 +113,16 @@ export default {
       set(val){
         this.$store.commit('setCurrentArea', val)
       }
-    }
+    },
+    searchName: {
+      get(){
+        return this.$store.state.searchName
+      },
+      set(val){
+        this.$store.commit('setSearchName', val)
+      }
+    },
+    
   }
 }
 </script>

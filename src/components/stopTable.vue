@@ -76,7 +76,7 @@ export default {
     },
     dataOfCurrentPage(){
       return this.$store.getters.dataOfCurrentPage
-    }
+    },
   }, 
 };
 </script>

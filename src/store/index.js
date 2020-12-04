@@ -11,7 +11,8 @@ export default createStore({
     currentPage: 1,
     currentCity: 'null',
     areas: [],
-    currentArea: 'null'
+    currentArea: 'null',
+    searchName: ''
   },
   mutations: {
     setCurrentPage(state, payload){
@@ -23,9 +24,16 @@ export default createStore({
     setCurrentArea(state, payload){
       state.currentArea = payload
     },
+    setSearchName(state, payload){
+      state.searchName = payload
+    },
+    
 
   },
   getters: {
+    filterSearchStation(state){
+      return state.GasStationData.filter(station => station.站名.includes(state.searchName))
+    },
     currentCity(state){
       return state.currentCity
     },
@@ -44,15 +52,17 @@ export default createStore({
     currentArea(state){
       return state.currentArea
     },
-    totalPages(state){
-      return Math.ceil(state.GasStationData.length / countOfPage)
+    totalPages(state, getters){
+      return Math.ceil(getters.filterSearchStation.length / countOfPage)
     }, 
     dataOfCurrentPage(state, getters){
-      if(getters.totalPages > maxPagesCount) {
-        const begin = (state.currentPage - 1) * 10
+      if(getters.filterSearchStation.length > countOfPage) {
+        const begin = (state.currentPage - 1) * countOfPage
         const end = begin + countOfPage
 
-        return state.GasStationData.slice(begin, end)
+        return getters.filterSearchStation.slice(begin, end)
+      }else {
+        return getters.filterSearchStation
       }
     },
     pageEnd(state, getters){
@@ -64,9 +74,14 @@ export default createStore({
       0 : state.currentPage < 7 ? 
       0 : state.currentPage - maxPagesCount + 8
 
-      if(state.currentPage + 8 > getters.totalPages){
-        return getters.totalPages - maxPagesCount
+      if(getters.totalPages > maxPagesCount){
+        if(state.currentPage + 8 > getters.totalPages){
+          return getters.totalPages - maxPagesCount
+        }
+      }else {
+        return add
       }
+      
 
       return add
     }
