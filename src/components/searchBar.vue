@@ -154,6 +154,9 @@ export default {
         this.$store.commit('setState', {dataName: 'isAllTimeOpen', val})
       }
     },
+  },
+  mounted(){
+    this.$store.dispatch('CityCountyDataFix')
   }
 }
 </script>

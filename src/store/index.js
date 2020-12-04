@@ -115,6 +115,18 @@ export default createStore({
 
       return add
     }
-    
   },
+  actions: {
+    CityCountyDataFix(store){
+      let val = store.state.CityCountyData
+      val.forEach(city => {
+        city.CityName = city.CityName.replace('臺', '台')
+        city.AreaList.forEach(area => {
+          area.AreaName = area.AreaName.replace('臺', '台')
+        })
+      }) 
+
+      store.commit('setState', {dataName: 'CityCountyData', val})
+    }
+  }
 })
