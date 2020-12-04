@@ -6,6 +6,7 @@
         <thead>
           <tr>
             <th><abbr title="站代號">站代號</abbr></th>
+            <th><abbr title="站名">站名</abbr></th>
             <th><abbr title="縣市">縣市-鄉鎮區</abbr></th>
             <th><abbr title="直營/加盟">直營/加盟</abbr></th>
             <th><abbr title="自助加油">自助加油</abbr></th>
@@ -18,6 +19,7 @@
         <tbody>
           <tr v-for="station in dataOfCurrentPage" :key="station.站代號">
             <td>{{ station.站代號 }}</td>
+            <td>{{ station.站名 }}</td>
             <td>{{ station.縣市 }} - {{ station.鄉鎮區 }}</td>
             <td>{{ station.類別 }}</td>
             <td>{{ station.刷卡自助 }}</td>
@@ -48,6 +50,7 @@
         <tfoot>
           <tr>
             <th><abbr title="站代號">站代號</abbr></th>
+            <th><abbr title="站名">站名</abbr></th>
             <th><abbr title="縣市">縣市</abbr></th>
             <th><abbr title="直營/加盟">直營/加盟</abbr></th>
             <th><abbr title="自助加油">自助加油</abbr></th>

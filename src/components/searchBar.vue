@@ -1,8 +1,9 @@
 <template>
   <div>
-    <pre>{{ currentCountry }}</pre>
+
     <div class="navbar-menu">
-      <div class="navbar-start">
+      <div class="navbar">
+
         <div class="navbar-item">
 
           <div class="is-multiple">
@@ -33,13 +34,45 @@
             </div>
           </div>
           
-
         </div>
+
+        <div class="navbar-item search">
+          <div class="field">
+            <div class="control">
+              <input class="input is-info" type="text" placeholder="搜尋站名">
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-item check">
+          <label class="checkbox">
+            <input type="checkbox">
+            直營
+          </label>
+        </div>
+
+        <div class="navbar-item check">
+          <label class="checkbox">
+            <input type="checkbox">
+            自助加油
+          </label>
+        </div>
+        <div class="navbar-item check">
+          <label class="checkbox">
+            <input type="checkbox">
+            98無鉛
+          </label>
+        </div>
+        <div class="navbar-item check">
+          <label class="checkbox">
+            <input type="checkbox">
+            24h
+          </label>
+        </div>
+
       </div>
 
-      <div class="navbar-end">
-        <!-- navbar items -->
-      </div>
+      
     </div>
   </div>
 </template>
@@ -80,6 +113,15 @@ export default {
 
 
 <style lang="scss" scoped>
+.navbar {
+  width: 100%;
+  .navbar-item.search {
+    width: 30%;
+    .field {
+      width: 100%;
+    }
+  }
+}
 .navbar-menu {
   margin-top: 20px;
   margin-bottom: 20px;
