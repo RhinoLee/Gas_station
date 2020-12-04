@@ -1,7 +1,20 @@
 <template>
-  <div id="nav">
-    <!-- <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> -->
+  <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://bulma.io">
+          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+          <router-link to="/" class="navbar-item">List</router-link>
+          <router-link to="/map" class="navbar-item">Map</router-link>
+        </div>
+
+      </div>
+    </nav>
   </div>
   <router-view/>
 </template>

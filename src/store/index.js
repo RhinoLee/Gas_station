@@ -1,7 +1,7 @@
 import { createStore } from 'vuex'
 const GasStationData = require('../../public/data/service_data.json')
 const maxPagesCount = 15
-const countOfPage = 10
+const countOfPage = 15
 
 export default createStore({
   state: {

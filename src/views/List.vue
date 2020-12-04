@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <navBar></navBar>
+    <searchBar></searchBar>
     <stopTable></stopTable>
     <pagination></pagination>
   </div>
 </template>
 
 <script>
-import navBar from '../components/navBar.vue'
+import searchBar from '../components/searchBar.vue'
 import stopTable from '../components/stopTable.vue'
 import pagination from '../components/pagination.vue'
 
 export default {
   components: {
-    navBar,
+    searchBar,
     stopTable,
     pagination
   }
