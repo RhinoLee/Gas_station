@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- <pre>{{ allGasStation }}</pre> -->
-    <div class="container">
+    <div class="table-container">
       <table class="table">
         <thead>
           <tr>
@@ -78,4 +78,9 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+  table {
+    width: 100%;
+  }
+</style>
 
