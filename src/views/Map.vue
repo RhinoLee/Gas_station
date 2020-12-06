@@ -1,5 +1,17 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <stationMap></stationMap>
   </div>
 </template>
+
+
+
+<script>
+import stationMap from '../components/stationMap.vue'
+
+export default {
+  components: {
+    stationMap
+  }
+}
+</script>
