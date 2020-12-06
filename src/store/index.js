@@ -9,7 +9,7 @@ export default createStore({
     GasStationData,
     CityCountyData,
     currentPage: 1,
-    currentCity: 'null',
+    currentCity: '台南市',
     areas: [],
     currentArea: 'null',
     searchName: '',
