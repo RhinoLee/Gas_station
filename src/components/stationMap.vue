@@ -62,7 +62,7 @@ export default {
         <p>站名：${station.站名}</p>
         <p>營業時間：${station.營業時間}</p>
         <p>超柴：${station.超柴 === "True" ? '有' : '無' }</p>
-        <p>地址：${station.地址}</p>
+        <p>地址：<a target="_blank" href="https://www.google.com/maps/place/${station.縣市}${station.鄉鎮區}${station.地址}/@${station.經度}, ${station.緯度}">${ station.地址 }</a></p>
         `
 
         L.circleMarker([station.緯度, station.經度], circle)

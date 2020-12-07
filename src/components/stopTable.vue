@@ -26,7 +26,7 @@
             <td>{{ station.無鉛98 }}</td>
             <td>{{ station.營業時間 }}</td>
             <td>{{ station.電話 }}</td>
-            <td>{{ station.地址 }}</td>
+            <td><a target="_blank" :href="`https://www.google.com/maps/place/${station.縣市}${station.鄉鎮區}${station.地址}/@${station.經度}, ${station.緯度}`">{{ station.地址 }}</a></td>
           </tr>
           <!-- <tr>
             <th>1</th>
