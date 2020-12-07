@@ -9,14 +9,15 @@ export default createStore({
     GasStationData,
     CityCountyData,
     currentPage: 1,
-    currentCity: '台南市',
+    currentCity: 'null',
     areas: [],
     currentArea: 'null',
     searchName: '',
     isDirectly: false,
     isSelfHelp: false,
     is98: false,
-    isAllTimeOpen: false
+    isAllTimeOpen: false,
+    isMapMode: false 
   },
   mutations: {
     setState(state, obj){

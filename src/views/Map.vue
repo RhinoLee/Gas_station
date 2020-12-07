@@ -15,6 +15,20 @@ export default {
   components: {
     stationMap,
     searchBar
+  },
+  mounted(){
+    this.$store.commit('setState', {
+      dataName: 'isMapMode',
+      val: true
+    })
+
+    
+  }, 
+  unmounted(){
+    this.$store.commit('setState', {
+      dataName: 'isMapMode',
+      val: false
+    })
   }
 }
 </script>

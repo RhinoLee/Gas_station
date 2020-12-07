@@ -16,7 +16,7 @@ export default {
     searchBar,
     stopTable,
     pagination
-  }
+  },
 }
 </script>
 

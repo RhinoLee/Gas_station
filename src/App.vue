@@ -9,8 +9,8 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <router-link to="/" class="navbar-item is-size-4">List</router-link>
-          <router-link to="/map" class="navbar-item is-size-4">Map</router-link>
+          <router-link :class="{ 'has-text-primary': !isMapMode }"  to="/" class="navbar-item is-size-3">List</router-link>
+          <router-link :class="{ 'has-text-primary': isMapMode }" to="/map" class="navbar-item is-size-3">Map</router-link>
         </div>
 
       </div>
@@ -18,6 +18,18 @@
   </div>
   <router-view/>
 </template>
+
+<script>
+export default {
+
+  computed: {
+    isMapMode(){
+      return this.$store.state.isMapMode 
+    }
+  }
+
+}
+</script>
 
 <style lang="scss">
 #app {
@@ -40,4 +52,10 @@
     }
   }
 }
+
+// .navbar-start {
+//   a.active {
+//     color: red
+//   }
+// }
 </style>
