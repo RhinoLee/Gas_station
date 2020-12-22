@@ -17,7 +17,7 @@ export default createStore({
     isSelfHelp: false,
     is98: false,
     isAllTimeOpen: false,
-    isMapMode: false 
+    isMapMode: false,
   },
   mutations: {
     setState(state, obj){

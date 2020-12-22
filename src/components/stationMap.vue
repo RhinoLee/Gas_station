@@ -12,7 +12,8 @@ import L from 'leaflet';
 export default {
   data(){
     return {
-      map: {}
+      map: {},
+      userPosition: {}
     }
   },
   watch: {
@@ -71,6 +72,18 @@ export default {
         
       })
     },
+    addUserMarker(){
+      let val = {}
+      const map = this.map
+
+      navigator.geolocation.getCurrentPosition(function(position) {
+        val.latitude = position.coords.latitude
+        val.longitude = position.coords.longitude
+
+        L.marker([val.latitude, val.longitude]).addTo(map);
+      });
+      
+    },
     clearMarker(){
       if( this.map === null ) return;
 
@@ -87,12 +100,13 @@ export default {
     },
     currentCity(){
       return this.$store.state.currentCity
-    }
+    },
   },
   mounted(){
     this.mapInit()
     this.addMarker(this.filterAreaStation)
-  }
+    this.addUserMarker()
+  },
 }
 </script>
 
