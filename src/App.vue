@@ -9,8 +9,8 @@
 
       <div class="navbar-menu">
         <div class="navbar-start">
-          <router-link :class="{ 'has-text-primary': !isMapMode }"  to="/" class="navbar-item is-size-3">List</router-link>
-          <router-link :class="{ 'has-text-primary': isMapMode }" to="/map" class="navbar-item is-size-3">Map</router-link>
+          <router-link :class="{ 'has-text-primary': isMapMode }"  to="/" class="navbar-item is-size-3">Map</router-link>
+          <router-link :class="{ 'has-text-primary': !isMapMode }" to="/list" class="navbar-item is-size-3">List</router-link>
         </div>
 
       </div>
