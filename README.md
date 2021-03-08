@@ -13,4 +13,4 @@
 * 前端框架：Vue.js (Cli, Vuex)
 * CSS 框架：Bulma
 * 地圖套件：Leaflet
-* 其他：HTML, CSS, JavaScript, Git
+* 其他：HTML, CSS(SCSS), JavaScript, Git
