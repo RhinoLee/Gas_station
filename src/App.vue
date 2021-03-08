@@ -3,7 +3,7 @@
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="./">
-          <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+          <h1 class="logo">Gas Station</h1>
         </a>
       </div>
 
@@ -51,6 +51,11 @@ export default {
       color: #42b983;
     }
   }
+}
+
+h1.logo {
+  margin-right: 10px;
+  font-size: 36px;
 }
 
 // .navbar-start {

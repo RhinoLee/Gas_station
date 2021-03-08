@@ -1,6 +1,5 @@
 <template>
   <div>
-    <!-- <pre>{{ allGasStation }}</pre> -->
     <div class="table-container">
       <table class="table">
         <thead>
@@ -28,24 +27,6 @@
             <td>{{ station.電話 }}</td>
             <td><a target="_blank" :href="`https://www.google.com/maps/place/${station.縣市}${station.鄉鎮區}${station.地址}/@${station.經度}, ${station.緯度}`">{{ station.地址 }}</a></td>
           </tr>
-          <!-- <tr>
-            <th>1</th>
-            <td>
-              <a
-                href="https://en.wikipedia.org/wiki/Leicester_City_F.C."
-                title="Leicester City F.C."
-                >Leicester City</a
-              >
-              <strong>(C)</strong>
-            </td>
-            <td>38</td>
-            <td>23</td>
-            <td>12</td>
-            <td>3</td>
-            <td>68</td>
-            <td>36</td>
-            <td>+32</td>
-          </tr> -->
         </tbody>
         <tfoot>
           <tr>
@@ -71,9 +52,6 @@
 <script>
 export default {
   computed: {
-    allGasStation(){
-      return this.$store.state.GasStationData
-    },
     dataOfCurrentPage(){
       return this.$store.getters.dataOfCurrentPage
     },

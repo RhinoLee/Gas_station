@@ -81,8 +81,6 @@ export default createStore({
       }else {
         return getters.filterAllTimeOpen
       }
-     
-      
     },
     totalPages(state, getters){
       return Math.ceil(getters.filterAreaStation.length / countOfPage)
