@@ -10,7 +10,7 @@
 * 若同意分享自身位置資訊，會顯示自身位置，方便找尋附近加油站
 
 ## 使用框架與技術
-前端框架：Vue.js (Cli, Vuex)
-CSS 框架：Bulma
-地圖套件：Leaflet
-其他：HTML, CSS, JavaScript, Git
+* 前端框架：Vue.js (Cli, Vuex)
+* CSS 框架：Bulma
+* 地圖套件：Leaflet
+* 其他：HTML, CSS, JavaScript, Git
